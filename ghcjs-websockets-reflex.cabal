@@ -4,29 +4,39 @@ synopsis:            Reflex FRP wrapper interface for GHCJS-WebSockets
 description:
 license:             BSD3
 license-file:        LICENSE
-author:              Oliver Batchelor
-category:            Game
+author:              Arie Peterson
+maintainer:          ariep@xs4all.nl
+category:            Web
 build-type:          Simple
 -- extra-source-files:  
 cabal-version:       >=1.10
-
 
 library
   exposed-modules:   JavaScript.WebSockets.Reflex.WebSocket
   hs-source-dirs: src
   build-depends:
-    base,
-    reflex, 
-    reflex-dom, 
-    ghcjs-websockets,
-    containers,
-    transformers,
-    text,
+    base >= 4.8 && < 4.9,
+    binary,
     bytestring,
+    containers,
+    dependent-map >= 0.1 && < 0.2,
+    ghcjs-base >= 0.2.1 && < 0.3,
     lens,
-    binary
-  default-extensions: GeneralizedNewtypeDeriving, DeriveGeneric, RecursiveDo, ScopedTypeVariables, FlexibleContexts, TupleSections, RankNTypes
-
+    reflex >= 0.3 && < 0.4, 
+    reflex-dom, 
+    text,
+    time,
+    transformers
+  default-language: Haskell2010
+  default-extensions:
+    GeneralizedNewtypeDeriving,
+    DeriveGeneric,
+    RecursiveDo,
+    ScopedTypeVariables,
+    FlexibleContexts,
+    TupleSections,
+    RankNTypes
+  ghc-options: -Wall
 
   
 
