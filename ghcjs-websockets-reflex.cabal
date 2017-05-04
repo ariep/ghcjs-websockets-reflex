@@ -15,15 +15,15 @@ library
   exposed-modules:   JavaScript.WebSockets.Reflex.WebSocket
   hs-source-dirs: src
   build-depends:
-    base >= 4.8 && < 4.9,
+    base >= 4.8 && < 4.10,
     binary,
     bytestring,
     containers,
     dependent-map >= 0.1 && < 0.3,
     ghcjs-base >= 0.2 && < 0.3,
     lens,
-    reflex >= 0.3 && < 0.5,
-    reflex-dom, 
+    reflex >= 0.3 && < 0.6,
+    reflex-dom >= 0.3 && < 0.5,
     text,
     time,
     transformers
